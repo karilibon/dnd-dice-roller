@@ -123,7 +123,7 @@ class DiceRoller {
         // 2. Минимальная рабочая конфигурация
         const config = {
             id: 'dice-canvas',
-            assetPath: '/node_modules/@3d-dice/dice-box/dist/assets/',
+            assetPath: 'https://cdn.jsdelivr.net/npm/@3d-dice/dice-box@1.1.4/dist/assets/',
             scale: 18,
             gravity: 6,
             angularDamping: 0.4,
