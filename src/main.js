@@ -1,4 +1,15 @@
-import DiceBox from '@3d-dice/dice-box';
+const DiceBox = window.DiceBox;
+
+// Проверка что библиотека загружена
+if (!DiceBox) {
+    console.error('DiceBox не загружен! Проверьте CDN скрипт.');
+    document.body.innerHTML = `
+        <div style="color: white; padding: 50px; text-align: center;">
+            <h1>Ошибка загрузки 3D библиотеки</h1>
+            <p>Пожалуйста, обновите страницу или проверьте подключение к интернету</p>
+        </div>
+    `;
+}
 
 class DiceRoller {
     constructor() {
@@ -123,7 +134,7 @@ class DiceRoller {
         // 2. Минимальная рабочая конфигурация
         const config = {
             id: 'dice-canvas',
-            assetPath: '/node_modules/@3d-dice/dice-box/dist/assets/',
+             assetPath: 'https://cdn.jsdelivr.net/npm/@3d-dice/dice-box@1.1.4/dist/assets/',
             scale: 18,
             gravity: 6,
             angularDamping: 0.4,
