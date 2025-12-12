@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&D 3D Dice Roller</title>
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-dice-d20"></i> D&D Dice Roller</h1>
+            <p class="subtitle">Бросайте виртуальные 3D-кости для Dungeons & Dragons</p>
+        </header>
+
+        <main>
+            <div class="dice-controls">
+                <div class="dice-selector">
+                    <h2><i class="fas fa-dice"></i> Выберите дайс</h2>
+                    <div class="dice-buttons">
+                        <button class="dice-btn" data-dice="d4">d4</button>
+                        <button class="dice-btn" data-dice="d6">d6</button>
+                        <button class="dice-btn" data-dice="d8">d8</button>
+                        <button class="dice-btn" data-dice="d10">d10</button>
+                        <button class="dice-btn" data-dice="d12">d12</button>
+                        <button class="dice-btn active" data-dice="d20">d20</button>
+                    </div>
+                </div>
+
+                <div class="modifier-section">
+                    <h2><i class="fas fa-plus-minus"></i> Модификатор</h2>
+                    <div class="modifier-controls">
+                        <button class="mod-btn" id="decrease-mod">-</button>
+                        <input type="number" id="modifier" value="0" min="-20" max="20">
+                        <button class="mod-btn" id="increase-mod">+</button>
+                    </div>
+                    <p class="modifier-hint">Добавляется к результату броска</p>
+                </div>
+
+                <div class="roll-section">
+                    <button id="roll-btn" class="roll-button">
+                        <i class="fas fa-hand-rock"></i> Бросить дайс
+                    </button>
+                    <button id="clear-btn" class="clear-button">
+                        <i class="fas fa-trash"></i> Очистить
+                    </button>
+                </div>
+            </div>
+
+            <div class="dice-display">
+                <div id="dice-box"></div>
+                <div class="results">
+                    <h2><i class="fas fa-list-ol"></i> Результаты</h2>
+                    <div class="result-display">
+                        <div class="current-roll">
+                            <h3>Текущий бросок:</h3>
+                            <div id="current-result">-</div>
+                        </div>
+                        <div class="roll-history">
+                            <h3>История бросков:</h3>
+                            <div id="history"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Создано с использованием <a href="https://github.com/3d-dice/dice-box" target="_blank">3d-dice</a></p>
+            <p class="hint"><i class="fas fa-lightbulb"></i> Подсказка: Вы можете перетаскивать дайс для вращения</p>
+        </footer>
+    </div>
+
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>

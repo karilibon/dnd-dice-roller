@@ -1,0 +1,25 @@
+{
+  "name": "dnd_dice_roller",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@3d-dice/dice-box": "^1.1.4",
+    "lil-gui": "^0.21.0",
+    "three": "^0.182.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "vite": "^7.2.7"
+  }
+}
